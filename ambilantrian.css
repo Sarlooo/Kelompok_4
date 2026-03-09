@@ -50,6 +50,16 @@
         color: #990000;
       }
 
+      .nav-links li:hover a {
+        color: #990000;
+      }
+
+      .nav-links li a {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+      }
+
       .sidebar-footer {
         height: 50px;
         background: linear-gradient(to top, #900000, transparent);
@@ -133,3 +143,5 @@
         background: white;
         color: #960010;
       }
+
+      
