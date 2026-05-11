@@ -20,26 +20,20 @@
     <div class="main-content">
       <div class="header">SEMUA KARTU ANTRIAN</div>
       <div class="form-container">
-        
-        <?php if (count($semua_antrian) > 0): ?>
+
             <div class="cards-wrapper">
-                <?php foreach ($semua_antrian as $tiket): ?>
                     <div class="ticket-card">
                       <h2>Nomor Antrian</h2>
                       <div class="ticket-body">
                         <div class="ticket-info">
                           <span>No. Telepon</span>
-                          <span>: <?php echo htmlspecialchars($tiket['no_telepon']); ?></span>
                         </div>
-                        <div class="ticket-date"><?php echo date('d F Y', strtotime($tiket['tanggal'])); ?></div>
-                        <div class="ticket-number-box"><?php echo sprintf("%03d", $tiket['nomor_antrian']); ?></div>
+                        <div class="ticket-date"></div>
+                        <div class="ticket-number-box"></div>
                       </div>
                     </div>
-                <?php endforeach; ?>
             </div>
-        <?php else: ?>
             <div class="pesan-kosong">Belum ada antrian yang terdaftar hari ini.</div>
-        <?php endif; ?>
 
         <a href="ambilantrian.php" class="back-btn">BACK</a>
       </div>
