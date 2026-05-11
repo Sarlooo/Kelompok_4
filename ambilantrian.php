@@ -3,7 +3,7 @@ session_start(); // WAJIB ditaruh paling atas untuk memulai session
 $host = "localhost";
 $user = "root";
 $pass = "";
-$db   = "kelompok-empat";
+$db   = "kelompok-empat-main";
 
 $koneksi = mysqli_connect($host, $user, $pass, $db);
 
