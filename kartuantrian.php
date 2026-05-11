@@ -36,6 +36,7 @@ while($row = mysqli_fetch_assoc($query)) {
     <div class="main-content">
       <div class="header">SEMUA KARTU ANTRIAN</div>
       <div class="form-container">
+        
         <?php if (count($semua_antrian) > 0): ?>
             <div class="cards-wrapper">
                 <?php foreach ($semua_antrian as $tiket): ?>
