@@ -1,27 +1,3 @@
-<?php
-session_start();
-$host = "localhost";
-$user = "root";
-$pass = "";
-$db   = "kelompok-empat-main";
-
-$koneksi = mysqli_connect($host, $user, $pass, $db);
-
-$punya_antrian = false;
-$data_antrian = [];
-
-// Cek session untuk melihat antrian milik user ini saja
-if (isset($_SESSION['antrian_saya']) && count($_SESSION['antrian_saya']) > 0) {
-    $punya_antrian = true;
-    $id_list = implode(",", $_SESSION['antrian_saya']);
-    
-    $query = mysqli_query($koneksi, "SELECT * FROM antrian WHERE id IN ($id_list) ORDER BY tanggal ASC");
-    while($row = mysqli_fetch_assoc($query)) {
-        $data_antrian[] = $row;
-    }
-}
-?>
-
 <!doctype html>
 <html lang="id">
 <head>
